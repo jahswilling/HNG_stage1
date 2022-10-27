@@ -6,6 +6,8 @@ The application has on one endpoint:
 
 [http://localhost:8000/](http://localhost:8000/) displays the index page
 
+Here is a link to the live URL hosted on AWS EBS: http://stage1-dev.us-east-1.elasticbeanstalk.com/
+
 
 ## Want to use this project?
 
