@@ -3,11 +3,16 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-origins = ["*"]
+origins = ["http://localhost:3000","http://localhost","https://cors-test.codehappy.dev"]
+
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+
 )
 
 
