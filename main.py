@@ -7,11 +7,7 @@ origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-    expose_headers=["*"]
+    allow_origins=origins
 )
 
 
@@ -19,7 +15,7 @@ app.add_middleware(
 async def index():
     return { "slackUsername": "Javi", 
             "backend": True, "age": 26, 
-            "bio": "Hello, i am jahswill Ovedhe  a self-motivated software engineer , "+
+            "bio": "Hi, I am jahswill Ovedhe  a self-motivated software engineer , "+
             "with extensive knowledge in building and implementing new solutions to solve real-world challenges."+
             " My programming career started with java mobile development and later with the flutter framework, "+
             "but I eventually became interested in web development with Python and its frameworks. "+
