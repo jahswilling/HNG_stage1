@@ -1,13 +1,12 @@
 from fastapi import FastAPI
-from starlette.middleware.cors import CORSMiddleware
-from starlette.middleware import Middleware
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+origins = ["*"]
 
-origins=["*"]
-app = CORSMiddleware(
-    app=app,
+app.add_middleware(
+    CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
@@ -15,8 +14,8 @@ app = CORSMiddleware(
 )
 
 
-@app.get('/')
-def index():
+@app.get("/")
+async def index():
     return { "slackUsername": "Javi", 
             "backend": True, "age": 26, 
             "bio": "Hello, i am jahswill Ovedhe  a self-motivated software engineer , "+
